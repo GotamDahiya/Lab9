@@ -31,10 +31,13 @@ int main(void)
 			}
 		}
 	//}
-	for (int i = 0; i < l; ++i)
+	int c=0;
+	for(int i=0;i<(l-1);i++)
 	{
-		printf("%c",str[i]);
+		if(str[i]!=str[i+1])
+			c=1;
+		else break;
 	}
-	printf("\n");
+	(c==1)?printf("Possible\n"):printf("not possible\n");
 	return 0;
 }
